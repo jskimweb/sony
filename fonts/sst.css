@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "SST W01 Light";
+  src: url("fonts/SSTW02Light.woff2") format("woff2"),
+    url("fonts/SSTW02Light.woff") format("woff"),
+    url("fonts/SSTW02Light.ttf") format("truetype"),
+    url("fonts/SSTW02Light.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SST W01 Medium";
+  src: url("fonts/SSTW02Medium.woff2") format("woff2"),
+    url("fonts/SSTW02Medium.woff") format("woff"),
+    url("fonts/SSTW02Medium.ttf") format("truetype"),
+    url("fonts/SSTW02Medium.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SST W01 Bold";
+  src: url("fonts/SSTW02Bold.woff2") format("woff2"),
+    url("fonts/SSTW02Bold.woff") format("woff"),
+    url("fonts/SSTW02Bold.ttf") format("truetype"),
+    url("fonts/SSTW02Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}

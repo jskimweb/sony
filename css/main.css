@@ -1,0 +1,93 @@
+@charset "utf-8";
+@import url("../fonts/sst.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "Malgun Gothic", Dotum, "Heiti TC", Roboto, Droid,
+    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: normal;
+  color: #2f353d;
+}
+
+/* Common Class */
+.container {
+  position: relative;
+  width: 119rem;
+  margin: 0 auto;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.clearfix::after {
+  content: "";
+  position: relative;
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+.wrap {
+  position: relative;
+  display: block;
+}
+
+/* Header */
+.header {
+}
+
+/* Visual */
+.visual {
+}
+
+/* THE LATEST */
+.latest {
+}
+
+/* WHAT'S HOT */
+.hot {
+}
+
+/* LATEST NEWS */
+.news {
+}
+
+/* Add-on */
+.addon {
+}
+
+/* Footer */
+.footer {
+}
+
+@media screen and (max-width: 980px) {
+}

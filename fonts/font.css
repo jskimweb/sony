@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "SST W01 Light";
+  src: url("SSTW02Light.woff2") format("woff2"),
+    url("SSTW02Light.woff") format("woff"),
+    url("SSTW02Light.ttf") format("truetype"),
+    url("SSTW02Light.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SST W01 Roman";
+  src: url("SSTW02Roman.woff2") format("woff2"),
+    url("SSTW02Roman.woff") format("woff"),
+    url("SSTW02Roman.ttf") format("truetype"),
+    url("SSTW02Roman.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SST W01 Medium";
+  src: url("SSTW02Medium.woff2") format("woff2"),
+    url("SSTW02Medium.woff") format("woff"),
+    url("SSTW02Medium.ttf") format("truetype"),
+    url("SSTW02Medium.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SST W01 Bold";
+  src: url("SSTW02Bold.woff2") format("woff2"),
+    url("SSTW02Bold.woff") format("woff"),
+    url("SSTW02Bold.ttf") format("truetype"),
+    url("SSTW02Bold.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Malgun Gothic";
+  src: url("MalgunGothic.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}

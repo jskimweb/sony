@@ -1,5 +1,5 @@
 @charset "utf-8";
-@import url("../fonts/sst.css");
+@import url("../fonts/font.css");
 
 * {
   margin: 0;
@@ -24,11 +24,11 @@ ul {
 
 html {
   font-size: 10px;
+  overflow-x: hidden;
 }
 
 body {
-  font-family: "Malgun Gothic", Dotum, "Heiti TC", Roboto, Droid,
-    "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "SST W01 Roman", "Malgun Gothic", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.65;
@@ -39,7 +39,8 @@ body {
 /* Common Class */
 .container {
   position: relative;
-  width: 119rem;
+  width: 100%;
+  max-width: 119rem;
   margin: 0 auto;
 }
 
@@ -63,30 +64,425 @@ body {
 
 /* Header */
 .header {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 6.4rem;
+  background-color: #000;
+}
+
+.header .container {
+  display: flex;
+}
+
+.header__logo {
+  display: block;
+  width: 10rem;
+  margin: 1.9rem 3.5rem 0 3.5rem;
+}
+
+.gnb {
+  display: block;
+}
+
+.gnb-list {
+  display: block;
+  font-size: 0;
+}
+
+.gnb-list > li {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.gnb-list > li > a {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 6.4rem;
+  color: #e4e7eb;
+  overflow: hidden;
+  padding: 0 0.5rem;
+  transition: all 0.3s;
+}
+
+.gnb-list > li > a:hover {
+  color: #fff;
+}
+
+.gnb-list > li > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.4rem;
+  width: 100%;
+  height: 0.4rem;
+  background: #336ef2;
+  transition: all 0.3s;
+}
+
+.gnb-list > li > a:hover::after {
+  bottom: 0;
+}
+
+.gnb-list > li > span {
+  display: block;
+  font-size: 1.5rem;
+  line-height: 6.4rem;
+  color: #e4e7eb;
+  overflow: hidden;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+
+.gnb-list > li > span:hover {
+  color: #fff;
+}
+
+.gnb-list > li > span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.4rem;
+  width: 100%;
+  height: 0.4rem;
+  background: #336ef2;
+  transition: all 0.3s;
+}
+
+.gnb-list > li > span:hover::after {
+  bottom: 0;
+}
+
+.icon-down-micro {
+  color: #83838f;
+}
+
+.gnb-list > li > span:hover .icon-down-micro {
+  color: #fff;
+}
+
+.user-menu {
+  display: block;
+  font-size: 0;
+  margin-left: auto;
+}
+
+.favo {
+  display: inline;
+  font-size: 1.4rem;
+  line-height: 6.4rem;
+  color: #e4e7eb;
+  margin-right: 1rem;
+}
+
+.favo:hover {
+  background: #2f353d;
+}
+
+.srch {
+  display: inline-block;
+  font-family: "SST W01 Medium", "Malgun Gothic", sans-serif;
+  font-size: 1.1rem;
+  color: #e4e7eb;
+  background: #504d56;
+  padding: 0.7rem 1rem 0.6rem 1.5rem;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.srch:hover {
+  background: #5d58f5;
+}
+
+.icon-search {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin-left: 0.3rem;
+  transform: scaleX(-1);
+}
+
+.site {
+  display: inline-block;
+  font-family: "SST W01 Medium", "Malgun Gothic", sans-serif;
+  font-size: 1.1rem;
+  color: #e4e7eb;
+  background: #2f353d;
+  padding: 0.7rem 1rem 0.6rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.site:hover {
+  background: #504d56;
+}
+
+.icon-up-micro {
+  font-size: 1.4rem;
 }
 
 /* Visual */
 .visual {
+  position: relative;
+  display: block;
+}
+
+.visual .container {
+  height: 64rem;
+  background: url("../images/visual.webp") no-repeat center;
+  background-size: cover;
+}
+
+.visual-txt-area {
+  position: absolute;
+  left: 48%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+}
+
+.visual__model {
+  display: block;
+  font-family: "SST W01 Medium", "Malgun Gothic", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.2rem;
+  color: #212530;
+}
+
+.visual__txt {
+  display: block;
+  font-size: 3.8rem;
+  letter-spacing: -0.152rem;
+  line-height: 4.3rem;
+  color: #212530;
+  margin: 0 0 2.8rem -0.2rem;
+  white-space: nowrap;
+}
+
+.visual__btn {
+  display: inline-block;
+  font-size: 1.3rem;
+  color: #fff;
+  background: #5865f5;
+  padding: 1rem 2.4rem;
+  white-space: nowrap;
+}
+
+.visual__btn:hover {
+  background: #3e59f2;
 }
 
 /* THE LATEST */
 .latest {
+  position: relative;
+  display: block;
+}
+
+.latest__tit {
+  font-family: "SST W01 Bold", "Malgun Gothic", sans-serif;
+  font-size: 2.2rem;
+  line-height: 3rem;
+  letter-spacing: 0.11rem;
+  color: #2f353d;
+  padding: 5rem 0 2.4rem 0;
+}
+
+.latest-slide {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 53rem;
+}
+
+.sw-latest {
+  overflow: visible;
+}
+
+.sw-latest .swiper-slide {
+  position: relative;
+  width: 38rem;
+  height: 49rem;
+}
+
+.sw-latest .swiper-slide--wide {
+  width: 78.5rem;
+}
+
+.sw-latest .swiper-slide img {
+  width: 38rem;
+  height: 49rem;
+}
+
+.sw-latest .swiper-slide--wide img {
+  width: 78.5rem;
+}
+
+.sw-latest__txt-1 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  font-family: "SST W01 Light", "Malgun Gothic", sans-serif;
+  font-size: 3rem;
+  font-weight: 200;
+  line-height: 1.2;
+  letter-spacing: -0.12rem;
+  color: #fff;
+  padding: 4rem 4.5rem;
+  white-space: nowrap;
+}
+
+.sw-latest__txt-1 span {
+  position: relative;
+  display: block;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  margin-top: 0.5rem;
+}
+
+.sw-latest__txt-2 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  font-family: "SST W01 Light", "Malgun Gothic", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 200;
+  line-height: 3.4rem;
+  letter-spacing: -0.104rem;
+  color: #706c7a;
+  background: rgba(243, 244, 246, 0.95);
+  padding: 1.5rem 4.5rem;
+  white-space: nowrap;
+}
+
+.sw-latest__txt-2 span {
+  position: relative;
+  display: block;
+  font-family: "SST W01 Medium", "Malgun Gothic", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.011rem;
+  color: #6f6f7b;
+}
+
+.sw-latest__txt-3 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  font-family: "SST W01 Light", "Malgun Gothic", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 200;
+  line-height: 3.4rem;
+  letter-spacing: -0.104rem;
+  color: #fff;
+  padding: 3rem;
+  white-space: nowrap;
+}
+
+.sw-latest__txt-3 span {
+  position: relative;
+  display: block;
+  font-family: "SST W01 Medium", "Malgun Gothic", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.011rem;
+  color: #fff;
+}
+
+.icon-right-open-big {
+  font-size: 1.6rem;
+  margin-left: -0.5rem;
+}
+
+.sw-latest__txt-3 .icon-right-open-big {
+  color: #fff;
+}
+
+.sw-latest__txt-4 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  font-family: "SST W01 Light", "Malgun Gothic", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 200;
+  line-height: 3.4rem;
+  letter-spacing: -0.104rem;
+  color: #bcbccc;
+  background: rgba(33, 37, 48, 0.95);
+  padding: 2rem 3rem;
+}
+
+.sw-latest__txt-4 span {
+  position: relative;
+  display: block;
+  font-family: "SST W01 Medium", "Malgun Gothic", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.011rem;
+  color: #bcbccc;
+}
+
+.sw-latest__txt-4 .icon-right-open-big {
+  color: #bcbccc;
+}
+
+.sw-latest__txt-5 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  font-family: "SST W01 Light", "Malgun Gothic", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 200;
+  line-height: 3.4rem;
+  letter-spacing: -0.104rem;
+  color: #000;
+  padding: 3rem;
+}
+
+.sw-latest__txt-5 span {
+  position: relative;
+  display: block;
+  font-family: "SST W01 Medium", "Malgun Gothic", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+  letter-spacing: 0.011rem;
+  color: #000;
+}
+
+.sw-latest__txt-5 .icon-right-open-big {
+  color: #000;
 }
 
 /* WHAT'S HOT */
 .hot {
+  position: relative;
+  display: block;
 }
 
 /* LATEST NEWS */
 .news {
+  position: relative;
+  display: block;
 }
 
 /* Add-on */
 .addon {
+  position: relative;
+  display: block;
 }
 
 /* Footer */
 .footer {
+  position: relative;
+  display: block;
 }
 
 @media screen and (max-width: 980px) {

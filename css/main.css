@@ -164,17 +164,21 @@ body {
 }
 
 .user-menu {
-  display: block;
+  display: flex;
+  height: 6.4rem;
   font-size: 0;
+  align-items: center;
   margin-left: auto;
 }
 
 .favo {
-  display: inline;
+  display: inline-block;
+  width: 3.1rem;
+  height: 3.6rem;
   font-size: 1.4rem;
-  line-height: 6.4rem;
+  line-height: 3.6rem;
+  text-align: center;
   color: #e4e7eb;
-  margin-right: 1rem;
 }
 
 .favo:hover {
@@ -183,12 +187,13 @@ body {
 
 .srch {
   display: inline-block;
+  height: 3.6rem;
   font-family: "SST W01 Medium", "Malgun Gothic", sans-serif;
   font-size: 1.1rem;
   color: #e4e7eb;
   background: #504d56;
   padding: 0.7rem 1rem 0.6rem 1.5rem;
-  margin-right: 0.2rem;
+  margin-left: 0.2rem;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -206,11 +211,13 @@ body {
 
 .site {
   display: inline-block;
+  height: 3.6rem;
   font-family: "SST W01 Medium", "Malgun Gothic", sans-serif;
   font-size: 1.1rem;
   color: #e4e7eb;
   background: #2f353d;
   padding: 0.7rem 1rem 0.6rem 1.5rem;
+  margin-left: 0.2rem;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -509,6 +516,7 @@ body {
   padding: 2.6rem 0 0 1.3rem;
   cursor: pointer;
   z-index: 99;
+  transition: all 0.5s;
 }
 
 .sw-latest__prev:hover {
@@ -529,6 +537,7 @@ body {
   padding: 2.6rem 0 0 1.8rem;
   cursor: pointer;
   z-index: 99;
+  transition: all 0.5s;
 }
 
 .sw-latest__next:hover {
@@ -820,7 +829,7 @@ body {
 }
 
 .addon-main {
-  border-top: 1px solid #e4e7eb;
+  border-top: .1rem solid #e4e7eb;
   padding: 3.4rem 0 5rem 0;
 }
 
@@ -832,10 +841,10 @@ body {
   position: relative;
   display: block;
   font-size: 1.3rem;
-  line-height: 2rem;
+  line-height: 1.9rem;
   color: #504d56;
-  padding-left: 3.2rem;
-  margin-bottom: 3rem;
+  padding-left: 3.7rem;
+  margin-bottom: 2.5rem;
   counter-increment: num;
 }
 
@@ -857,6 +866,294 @@ body {
   display: block;
   padding: 6rem 0 4.4rem;
   background: #1f2024;
+}
+
+.footer-top {
+  border-bottom: solid .1rem #3c3c42;
+  padding-bottom: 2.7rem;
+}
+
+.footer-list-dep-1 {
+  display: flex;
+  width: 100%;
+  margin-bottom: 7.4rem;
+}
+
+.footer-list-dep-1>li {
+  display: block;
+  width: 25%;
+}
+
+.footer-list-dep-1>li>span {
+  display: block;
+  font-size: 1.5rem;
+  letter-spacing: -0.06rem;
+  line-height: 1.8rem;
+  color: #878792;
+  margin-bottom: 1.8rem;
+}
+
+.footer-list-dep-2>li {
+  font-size: 0;
+}
+
+.footer-list-dep-2>li>a {
+  display: inline-block;
+  font-size: 1.3rem;
+  line-height: 2.4rem;
+  color: #e4e7eb;
+  transition: all 0.5s;
+}
+
+.footer-list-dep-2>li>a:hover {
+  color: #878792;
+}
+
+.footer-etc {
+  display: flex;
+  width: 100%;
+}
+
+.footer__lang {
+  position: relative;
+  display: inline-block;
+  width: 19.8rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 3.8rem;
+  color: #fff;
+  background: #3c3c42;
+  padding: 0 1.2rem;
+  margin-right: auto;
+  transition: all .5s;
+}
+
+.footer__lang:hover {
+  background: #504d56;
+}
+
+.footer__lang::before {
+  content: '';
+  position: relative;
+  display: inline-block;
+  width: 2rem;
+  height: 1.4rem;
+  vertical-align: -.3rem;
+  background: url('../images/flag.png') no-repeat -10.03rem -1.42rem;
+  margin-right: 1rem;
+}
+
+.footer-etc-wrap {}
+
+.footer-etc-menu {
+  display: block;
+  float: left;
+  font-size: 0;
+}
+
+.footer-etc-menu a {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 3.8rem;
+  color: #e4e7eb;
+  margin-left: 1.56rem;
+}
+
+.footer-etc-menu a:hover {
+  color: #878792;
+}
+
+.footer-sns-area {
+  position: relative;
+  display: flex;
+  float: left;
+  margin-left: 2.4rem;
+}
+
+.sns-box {
+  position: absolute;
+  left: 50%;
+  bottom: 5.2rem;
+  transform: translateX(-50%);
+  display: none;
+  width: 26rem;
+  min-height: 13.5rem;
+  text-align: left;
+  background: rgba(255, 255, 255, .95);
+  padding: 2.5rem;
+  cursor: initial;
+}
+
+.sns-box__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  width: 3.6rem;
+  height: 3.2rem;
+  font-size: 1.3rem;
+  line-height: 3.2rem;
+  text-align: center;
+  color: #fff;
+  background: #3c3c42;
+  cursor: pointer;
+  transition: all .5s;
+}
+
+.sns-box__close:hover {
+  background: #2f353d;
+}
+
+.sns-box-cont {
+  display: none;
+}
+
+.sns-box__tit {
+  display: block;
+  font-size: 1.6875rem;
+  line-height: 1.46667;
+  letter-spacing: -.072rem;
+  color: #706c7a;
+  margin-bottom: 2.3rem;
+}
+
+.sns-box__yt {
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  color: #fff;
+  background: #e52117;
+  border-radius: .3rem;
+  padding-left: .7rem;
+  border: 1px solid #ccc;
+}
+
+.sns-box__yt img {
+  margin-right: .3rem;
+}
+
+.sns-box__yt em {
+  font-size: 1.1rem;
+  font-style: normal;
+  line-height: 2.4rem;
+  color: #999;
+  background: #fff;
+  border-radius: 0 .3rem .3rem 0;
+  padding: .7rem .55rem .65rem .3rem;
+}
+
+.sns-box__fb {
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+  color: #fff;
+  background: #1877f1;
+  border-radius: .3rem;
+  padding: 0 .7rem;
+  border: 1px solid #ccc;
+}
+
+.sns-box__link {
+  display: block;
+  font-size: 1.25rem;
+  color: #7494ef;
+  padding: 1.5rem 0 .3rem 0;
+}
+
+.sns-box-cont--i .sns-box__link {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  background: #507da2;
+  padding: .85rem 0;
+}
+
+.sns-box__arrow {
+  position: absolute;
+  left: 50%;
+  bottom: -3.5rem;
+  transform: translateX(-50%);
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, .95);
+}
+
+.footer__sns {
+  position: relative;
+  display: inline-block;
+  width: 3.6rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  text-align: center;
+  background: #3c3c42;
+  margin-left: .2rem;
+  cursor: pointer;
+}
+
+.footer__sns--y:hover {
+  background: #ef3c39;
+}
+
+.footer__sns--f:hover {
+  background: #3b5b99;
+}
+
+.footer__sns--i:hover {
+  background: #507da2;
+}
+
+.footer__sns>i {
+  font-size: 2rem;
+  color: #fff;
+  vertical-align: -.3rem;
+}
+
+.footer-bot {
+  padding-top: 3.4rem;
+  height: 20.8rem;
+}
+
+.copy {
+  display: block;
+  font-size: 1rem;
+  line-height: 1.65rem;
+  color: #878792;
+  margin-bottom: .4rem;
+}
+
+.legal {
+  display: block;
+  font-size: 0;
+  margin-bottom: 1.2rem;
+}
+
+.legal a {
+  font-size: 1rem;
+  line-height: 1.46667rem;
+  color: #e4e7eb;
+  margin-right: 1rem;
+}
+
+.legal a em {
+  font-style: normal;
+  color: #dc3a1a;
+}
+
+.addr {
+  display: block;
+  font-size: 1rem;
+  font-style: normal;
+  line-height: 1.65rem;
+  color: #878792;
+}
+
+.addr a {
+  color: #e4e7eb;
+}
+
+.addr a:hover {
+  color: #878792;
 }
 
 @media screen and (max-width: 980px) {}

@@ -57,6 +57,42 @@ body {
   clear: both;
 }
 
+.fix {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  z-index: 9999;
+}
+
+.go-top {
+  position: absolute;
+  right: -14rem;
+  bottom: 5rem;
+  display: block;
+  width: 4rem;
+  height: 3.2rem;
+  line-height: 3.2rem;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(33, 37, 48, 0.4);
+  border-radius: .125rem;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .5s;
+}
+
+.go-top:hover {
+  background-color: rgba(33, 37, 48, 0.8);
+}
+
+.go-top--show {
+  visibility: initial;
+  opacity: 1;
+}
+
 .wrap {
   position: relative;
   display: block;
@@ -69,9 +105,10 @@ body {
   width: 100%;
   height: 6.4rem;
   background-color: #000;
+  z-index: 999999;
 }
 
-.header .container {
+.header>.container {
   display: flex;
 }
 
@@ -185,7 +222,7 @@ body {
   background: #2f353d;
 }
 
-.srch {
+.srch-btn {
   display: inline-block;
   height: 3.6rem;
   font-family: "SST W01 Medium", "Malgun Gothic", sans-serif;
@@ -198,7 +235,7 @@ body {
   transition: all 0.3s;
 }
 
-.srch:hover {
+.srch-btn:hover {
   background: #5d58f5;
 }
 
@@ -209,7 +246,7 @@ body {
   transform: scaleX(-1);
 }
 
-.site {
+.site-btn {
   display: inline-block;
   height: 3.6rem;
   font-family: "SST W01 Medium", "Malgun Gothic", sans-serif;
@@ -222,13 +259,183 @@ body {
   transition: all 0.3s;
 }
 
-.site:hover {
+.site-btn:hover {
   background: #504d56;
 }
 
 .icon-up-micro {
   font-size: 1.4rem;
 }
+
+.elec {
+  position: relative;
+  display: none;
+}
+
+.elec::after {
+  content: '';
+  display: block;
+  height: 20px;
+  -webkit-box-shadow: inset 0px 20px 20px -20px rgb(39 43 55 / 25%);
+  box-shadow: inset 0px 20px 20px -20px rgb(39 43 55 / 25%);
+}
+
+.elec-top {
+  background-color: #fff;
+  padding: 3rem 0 3.4rem 0;
+}
+
+.elec-cate-area {
+  display: flex;
+  margin-bottom: 5rem;
+}
+
+.elec-cate {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: calc(119rem / 5);
+  border-right: .1rem solid #d5d5d5;
+  margin-right: 2rem;
+}
+
+.elec-cate:last-child {
+  border-right: 0;
+  margin-right: 0;
+}
+
+.elec-cate__tit {
+  display: block;
+  font-family: "SST W01 Medium", "Malgun Gothic", sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.794rem;
+  color: #5d58f5;
+  margin-bottom: 1.8rem;
+}
+
+.elec-cate__tit .icon-right-open-mini {
+  font-size: 1.2rem;
+  margin-left: -.7rem;
+}
+
+.elec-menu-list {
+  display: block;
+}
+
+.elec-menu-list>li {
+  position: relative;
+  display: block;
+  /* font-size: 0; */
+  padding-left: 1.8rem;
+  margin-bottom: 1.4rem;
+}
+
+.elec-menu-list>li:last-child {
+  margin-bottom: 2.7rem;
+}
+
+.elec-menu-list>li>i {
+  position: absolute;
+  left: 0;
+  top: -.4rem;
+  font-size: 1rem;
+}
+
+.elec-menu-list>li>a {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  color: #61656A;
+  margin-left: 0 0 1rem 1.5rem;
+  cursor: pointer;
+  translate: all .5s;
+}
+
+.elec-menu-list>li>a:hover {
+  color: #5d58f5;
+}
+
+.elec-cate__all {
+  display: block;
+  font-size: 1.1rem;
+  color: #5d58f5;
+  margin-top: auto;
+  transition: all .5s;
+}
+
+.elec-cate__all:hover {
+  color: #3c4c74;
+}
+
+.elec-btn-area {
+  display: flex;
+  justify-content: center;
+}
+
+.elec__btn {
+  display: block;
+  width: 21.752rem;
+  height: 4rem;
+  font-size: 1.3rem;
+  text-align: center;
+  color: #fff;
+  background-color: #5865f5;
+  padding: 1rem 2.4rem;
+  margin: 0 2.5rem
+}
+
+.elec__btn .icon-th {
+  margin-right: .3rem;
+}
+
+.elec-bot {
+  background-color: #f1f5f9;
+  padding: 3.1rem 0 3.4rem 0;
+}
+
+.elec-bot .container {
+  display: flex;
+}
+
+.elec-bot-cont {
+  display: block;
+  width: 50%;
+}
+
+.elec-bot__img {
+  display: block;
+  float: left;
+  width: 27%;
+  height: auto;
+  margin-right: 4.9rem;
+}
+
+.elec-bot__img img {
+  width: 100%;
+}
+
+.elec-bot-txt-area {
+  display: block;
+}
+
+.elec-bot__tit {
+  display: block;
+  font-family: "SST W01 Medium", "Malgun Gothic", sans-serif;
+  font-size: 1.3rem;
+  line-height: 2.64rem;
+  color: #3c4c74;
+}
+
+.elec-bot__desc {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 2.64rem;
+  color: #3c3c42;
+}
+
+.srch {}
+
+.site {}
 
 /* Visual */
 .visual {
@@ -307,11 +514,8 @@ body {
 
 .sw-latest {
   display: block;
-  overflow: visible;
-}
-
-.sw-latest .swiper-wrapper {
   height: 49rem;
+  overflow: visible;
 }
 
 .sw-latest .swiper-slide {
@@ -499,7 +703,8 @@ body {
 }
 
 .sw-latest .swiper-button-disabled {
-  display: none !important;
+  visibility: hidden;
+  opacity: 0;
 }
 
 .sw-latest__prev {
@@ -507,7 +712,7 @@ body {
   left: -8%;
   top: calc(49rem / 2);
   transform: translateY(-50%);
-  display: none;
+  display: block;
   width: 4.8rem;
   height: 7.6rem;
   color: #fff;
@@ -516,6 +721,8 @@ body {
   padding: 2.6rem 0 0 1.3rem;
   cursor: pointer;
   z-index: 99;
+  visibility: hidden;
+  opacity: 0;
   transition: all 0.5s;
 }
 
@@ -523,12 +730,17 @@ body {
   background: rgba(33, 37, 48, 0.8);
 }
 
+.sw-latest__prev--show {
+  visibility: initial;
+  opacity: 1;
+}
+
 .sw-latest__next {
   position: absolute;
   right: -8%;
   top: calc(49rem / 2);
   transform: translateY(-50%);
-  display: none;
+  display: block;
   width: 4.8rem;
   height: 7.6rem;
   color: #fff;
@@ -537,6 +749,8 @@ body {
   padding: 2.6rem 0 0 1.8rem;
   cursor: pointer;
   z-index: 99;
+  visibility: hidden;
+  opacity: 0;
   transition: all 0.5s;
 }
 
@@ -544,14 +758,25 @@ body {
   background: rgba(33, 37, 48, 0.8);
 }
 
+.sw-latest__next--show {
+  visibility: initial;
+  opacity: 1;
+}
+
 .sw-latest__pg {
+  left: 50%;
   bottom: 0 !important;
+  transform: translateX(-50%);
 }
 
 .sw-latest__pg .swiper-pagination-bullet {
   background: #bcbccc;
   opacity: 1;
   margin: 0 0.5rem 0 0 !important;
+}
+
+.sw-latest__pg .swiper-pagination-bullet:last-child {
+  margin-right: 0 !important;
 }
 
 .sw-latest__pg .swiper-pagination-bullet-active {
@@ -943,8 +1168,6 @@ body {
   margin-right: 1rem;
 }
 
-.footer-etc-wrap {}
-
 .footer-etc-menu {
   display: block;
   float: left;
@@ -1133,11 +1356,21 @@ body {
   line-height: 1.46667rem;
   color: #e4e7eb;
   margin-right: 1rem;
+  transition: all .5s;
+}
+
+.legal a:hover {
+  color: #878792;
 }
 
 .legal a em {
   font-style: normal;
   color: #dc3a1a;
+  transition: all .5s;
+}
+
+.legal a em:hover {
+  color: #878792;
 }
 
 .addr {
@@ -1150,6 +1383,7 @@ body {
 
 .addr a {
   color: #e4e7eb;
+  transition: all .5s;
 }
 
 .addr a:hover {

@@ -22,17 +22,17 @@
 </head>
 
 <body>
-  <!-- Go-top -->
-  <div class="fix">
-    <div class="container">
-      <span class="go-top">
-        <i class="icon-up-open-big"></i>
-      </span>
-    </div>
-  </div>
-  <!--// Go-top -->
-
   <div class="wrap">
+    <!-- Sony site -->
+    <div class="site">
+      <div class="container">
+        <button class="site__close">
+          닫기<i class="icon-cancel"></i>
+        </button>
+      </div>
+    </div>
+    <!--// Sony site -->
+
     <!-- Header -->
     <header class="header">
       <div class="container">
@@ -65,8 +65,16 @@
         </nav>
         <div class="user-menu">
           <a href="#" class="favo"><i class="icon-heart"></i></a>
-          <span class="srch-btn">소니 검색<i class="icon-search"></i></span>
-          <span class="site-btn">소니 사이트<i class="icon-up-micro"></i></span>
+          <button class="srch-btn">소니 검색<i class="icon-search"></i></button>
+          <button class="site-btn">소니 사이트<i class="icon-up-micro"></i></button>
+          <i class="icon-down-dir srch-arrow"></i>
+        </div>
+        <div class="srch">
+          <form action="" method="GET" id="srch-form">
+            <label for="srch-input">소니검색</label>
+            <input type="text" placeholder="검색" id="srch-input">
+            <i class="icon-cancel srch-form__clear"></i>
+          </form>
         </div>
       </div>
       <div class="elec">
@@ -222,8 +230,6 @@
           </div>
         </div>
       </div>
-      <div class="srch"></div>
-      <div class="site"></div>
     </header>
     <!--// Header -->
 
@@ -492,8 +498,7 @@
             <li>표시된 제품 컬러 및 기능은 모델 및 국가에 따라 달라질 수 있습니다.</li>
             <li>4K: 3,840 x 2,160픽셀.</li>
             <li>거주하는 국가 또는 지역에 따라 사용할 수 없는 기능이 있습니다. 제품에 설치되거나 제품을 통해 액세스할 수있는 소프트웨어/서비스의 일부 또는 전부는 사전 통보없이
-              변경, 중단, 제거,
-              일시 중단 또는 해지될 수 있습니다.</li>
+              변경, 중단, 제거, 일시 중단 또는 해지될 수 있습니다.</li>
             <li>기능이나 사양은 사전 고지 없이 변경될 수 있습니다.</li>
           </ul>
         </div>
@@ -608,6 +613,16 @@
       </div>
     </footer>
     <!-- Footer -->
+
+    <!-- Go-top -->
+    <div class="fix">
+      <div class="container">
+        <span class="go-top">
+          <i class="icon-up-open-big"></i>
+        </span>
+      </div>
+    </div>
+    <!--// Go-top -->
   </div>
 </body>
 

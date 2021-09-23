@@ -117,7 +117,7 @@ window.onload = function () {
 	// addon show & hide
 	addonTop = $('.addon-top');
 	addonMain = $('.addon-main');
-	addonIcon = addon_top.find('i');
+	addonIcon = addonTop.find('i');
 
 	addonTop.click(function () {
 		addonMain.slideToggle();
@@ -126,6 +126,7 @@ window.onload = function () {
 
 	// sns-box
 	const footerSns = [$('.footer__sns--y'), $('.footer__sns--f'), $('.footer__sns--i')];
+	const snsBoxClose = $('.sns-box__close');
 
 	$.each(footerSns, function (index) {
 		// sns-box show & hide
@@ -136,8 +137,8 @@ window.onload = function () {
 		});
 
 		// sns-box close
-		footerSns[index].find('.icon-cancel').click(function () {
-			footerSns[index].find('.sns-box').stop().fadeOut(200);
+		snsBoxClose.click(function () {
+			$(this).find('.sns-box').stop().fadeOut(200);
 		});
 	});
 
@@ -155,7 +156,7 @@ window.onload = function () {
 	});
 
 	goTop.click(function () {
-		$('html,body').animate({
+		$('html, body').animate({
 			scrollTop: 0
 		});
 	});

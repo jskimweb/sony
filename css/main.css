@@ -57,6 +57,65 @@ body {
   clear: both;
 }
 
+/* Modal */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+  z-index: 9999999;
+}
+
+.modal-box {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 55rem;
+  height: 30rem;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 4.5rem 5rem;
+}
+
+.modal__txt01 {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 3rem;
+  color: #000;
+}
+
+.modal__txt02 {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+}
+
+.modal__close {
+  position: absolute;
+  right: 5rem;
+  bottom: 4.5rem;
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 4rem;
+  text-align: center;
+  border: 0;
+  border-radius: .5rem;
+  color: #fff;
+  background-color: #000;
+  padding: 0 3rem;
+  cursor: pointer;
+}
+
 .wrap {
   position: relative;
   display: block;
@@ -270,7 +329,7 @@ body {
   bottom: 0;
 }
 
-.gnb-list>li>span {
+.elec-btn {
   display: block;
   font-size: 1.5rem;
   line-height: 6.4rem;
@@ -280,11 +339,11 @@ body {
   cursor: pointer;
 }
 
-.gnb-list>li>span:hover {
+.elec-btn:hover {
   color: #fff;
 }
 
-.gnb-list>li>span::after {
+.elec-btn::after {
   content: "";
   position: absolute;
   left: 0;
@@ -295,7 +354,7 @@ body {
   transition: all 0.3s;
 }
 
-.gnb-list>li>span:hover::after {
+.elec-btn:hover::after {
   bottom: 0;
 }
 
@@ -303,7 +362,7 @@ body {
   color: #83838f;
 }
 
-.gnb-list>li>span:hover .icon-down-micro {
+.elec-btn:hover .icon-down-micro {
   color: #fff;
 }
 
@@ -374,6 +433,7 @@ body {
 
 .icon-up-micro {
   font-size: 1.4rem;
+  color: #83838f;
 }
 
 .srch-arrow {
@@ -1076,6 +1136,10 @@ body {
   padding: 0.5rem .8rem;
 }
 
+.icon-heart--on {
+  color: #f25429 !important;
+}
+
 .hot-box-img .icon-heart:hover {
   color: #f25429;
 }
@@ -1556,17 +1620,8 @@ body {
 }
 
 /* Go-top */
-.fix {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  z-index: 9999;
-}
-
 .go-top {
-  position: absolute;
+  position: fixed;
   right: -14rem;
   bottom: 5rem;
   display: block;
@@ -1578,6 +1633,7 @@ body {
   background-color: rgba(33, 37, 48, 0.4);
   border-radius: .125rem;
   cursor: pointer;
+  z-index: 9999;
   visibility: hidden;
   opacity: 0;
   transition: all .5s;

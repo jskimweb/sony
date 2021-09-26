@@ -1,4 +1,11 @@
 window.onload = function () {
+	// modal
+	const modal = $('.modal');
+
+	modal.click(function () {
+		$(this).fadeOut();
+	});
+
 	// elec show & hide
 	const elec = $('.elec');
 	const elecBtn = $('.elec-btn');
@@ -114,10 +121,20 @@ window.onload = function () {
 		allowTouchMove: false,
 	});
 
+	// WHAT'S HOT heart on & off
+	const iconHeart = $('.hot-box-img .icon-heart');
+	const iconHeartOn = 'icon-heart--on';
+
+	iconHeart.click(function (event) {
+		event.preventDefault();
+		event.stopPropagation();
+		$(this).toggleClass(iconHeartOn);
+	});
+
 	// addon show & hide
-	addonTop = $('.addon-top');
-	addonMain = $('.addon-main');
-	addonIcon = addonTop.find('i');
+	const addonTop = $('.addon-top');
+	const addonMain = $('.addon-main');
+	const addonIcon = $('.addon-top i');
 
 	addonTop.click(function () {
 		addonMain.slideToggle();
@@ -138,14 +155,14 @@ window.onload = function () {
 
 		// sns-box close
 		snsBoxClose.click(function () {
-			$(this).find('.sns-box').stop().fadeOut(200);
+			footerSns[index].find('.sns-box').stop().fadeOut(200);
 		});
 	});
 
 	// go-top
 	const winScrTop = $(window).scrollTop();
 	const goTop = $('.go-top');
-	const goTopShow = '.go-top--show';
+	const goTopShow = 'go-top--show';
 
 	$(window).scroll(function () {
 		if (winScrTop >= 400) {

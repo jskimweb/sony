@@ -578,9 +578,9 @@ body {
   font-size: 1.1rem;
   line-height: 1.2rem;
   color: #61656A;
-  margin-left: 0 0 1rem 1.5rem;
+  margin: 0 0 1rem 1.5rem;
   cursor: pointer;
-  translate: all .5s;
+  transition: all .5s;
 }
 
 .elec-menu-list>li>a:hover {
@@ -1252,7 +1252,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
-  transform: all 0.3s;
+  transition: all 0.3s;
 }
 
 .sw-news-link:hover>img {

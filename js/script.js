@@ -40,7 +40,7 @@ window.onload = function () {
 	// 검색창 보이기/숨기기
 	const srch = $('.srch');
 	const srchBtn = $('.srch-btn');
-	const srchInput = $('#srch-input');
+	const srchInput = $('.srch-form__input');
 	const srchFormClr = $('.srch-form__clear');
 	const srchArrow = $('.srch-arrow');
 
@@ -94,7 +94,7 @@ window.onload = function () {
 
 	closeSite.click(function () {
 		site.removeClass(openSite);
-	})
+	});
 
 	// THE LATEST 슬라이드
 	new Swiper('.sw-latest', {
